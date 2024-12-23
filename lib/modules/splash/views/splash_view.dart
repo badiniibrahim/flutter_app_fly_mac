@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fly_mac/routes/app_pages.dart';
-import 'package:fly_mac/utilies/colors.style.dart';
+import 'package:fly_mac/utils/colors.style.dart';
 
 import 'package:get/get.dart';
 

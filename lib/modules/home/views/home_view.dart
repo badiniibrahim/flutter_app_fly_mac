@@ -1,8 +1,8 @@
 import 'dart:collection';
 
 import 'package:flutter/material.dart';
-import 'package:fly_mac/utilies/colors.style.dart';
-import 'package:fly_mac/utilies/constantes.dart';
+import 'package:fly_mac/utils/colors.style.dart';
+import 'package:fly_mac/utils/constants.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../controllers/home_controller.dart';
@@ -268,34 +268,133 @@ class HomeView extends GetView<HomeController> {
                 ),
                 const SizedBox(height: 10),
                 Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Center(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Current offer",
+                          style: GoogleFonts.poppins(
+                            textStyle: const TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 24,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          "See all",
+                          style: GoogleFonts.poppins(
+                            textStyle: const TextStyle(
+                              color: AppColors.c1,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 14,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Card(
+                    color: Colors.white,
+                    child: SizedBox(
+                      height: 122,
+                      width: MediaQuery.of(context).size.width,
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
-                            "Current offer",
-                            style: GoogleFonts.poppins(
-                              textStyle: const TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w600,
-                                fontSize: 24,
-                              ),
-                            ),
+                          Container(
+                            color: AppColors.c2,
+                            child: SizedBox(
+                                height: 122,
+                                width: 150,
+                                child: Container(
+                                  color: AppColors.c2,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                          "assets/images/mastercardlogo.png"),
+                                      const SizedBox(height: 2),
+                                      Text(
+                                        "25%OFF",
+                                        style: GoogleFonts.poppins(
+                                          textStyle: const TextStyle(
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w800,
+                                            fontSize: 16,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                )),
                           ),
-                          Text(
-                            "See all",
-                            style: GoogleFonts.poppins(
-                              textStyle: const TextStyle(
-                                color: AppColors.c1,
-                                fontWeight: FontWeight.w500,
-                                fontSize: 14,
-                              ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  textAlign: TextAlign.start,
+                                  "25% discount ",
+                                  style: GoogleFonts.poppins(
+                                    textStyle: const TextStyle(
+                                      color: Color(0xFF272726),
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 19,
+                                    ),
+                                  ),
+                                ),
+                                Text(
+                                  textAlign: TextAlign.start,
+                                  "with mastercard",
+                                  style: GoogleFonts.poppins(
+                                    textStyle: const TextStyle(
+                                      color: Color(0xFF272726),
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 19,
+                                    ),
+                                  ),
+                                ),
+                                Text(
+                                  maxLines: 1,
+                                  "Get a discount",
+                                  textAlign: TextAlign.start,
+                                  style: GoogleFonts.poppins(
+                                    textStyle: const TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w300,
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ),
+                                Text(
+                                  maxLines: 1,
+                                  "when you use this.",
+                                  textAlign: TextAlign.start,
+                                  style: GoogleFonts.poppins(
+                                    textStyle: const TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w300,
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
-                          ),
+                          )
                         ],
                       ),
-                    ))
+                    ),
+                  ),
+                )
               ],
             ),
           ),
